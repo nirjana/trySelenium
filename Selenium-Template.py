@@ -72,14 +72,14 @@ end_of_page = driver.find_element(by= By.XPATH, value='/html/body/app-root/div/m
 print(end_of_page)
 
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"end_of_page {driver.end_of_page}")
+    f.write(f"end_of_page {end_of_page}")
 
 
 turnover = total_turnover()
 print(turnover)
 
 with open('./GitHub_Action_Results.txt', 'w') as f:
-    f.write(f"turnover = {driver.turnover }")
+    f.write(f"turnover = {turnover }")
 
 
 
