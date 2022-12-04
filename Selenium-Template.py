@@ -34,6 +34,8 @@ for option in options:
 
     
 driver = webdriver.Chrome(options = chrome_options)
+driver.maximize_window() # For maximizing window
+driver.implicitly_wait(20) 
 
 
 
