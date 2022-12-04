@@ -50,14 +50,14 @@ with open('./GitHub_Action_Results.txt', 'w') as f:
     f.write(f"This was written with a GitHub action {driver.title}")
     
 
-# element = driver.find_element(
-#     'xpath', "/html/body/app-root/div/main/div/app-floor-sheet/div/div[3]/div/div[5]/div/select")
+element = driver.find_element(
+    'xpath', "/html/body/app-root/div/main/div/app-floor-sheet/div/div[3]/div/div[5]/div/select")
 
 
-# driver.execute_script("arguments[0].click();", element)
-# time.sleep(2)
+driver.execute_script("arguments[0].click();", element)
+time.sleep(20)
 
-# print('Click')
+print('Click')
 
 
 def total_turnover():
@@ -70,7 +70,7 @@ try:
 except:
     pass 
 driver.find_element(by=By.XPATH, value=" //button[normalize-space()='Filter']").click()
-time.sleep(1) 
+time.sleep(10) 
 end_of_page = driver.find_element(by= By.XPATH, value='/html/body/app-root/div/main/div/app-floor-sheet/div/div[5]/div[2]/pagination-controls/pagination-template/ul/li[9]/a/span[2]').text
 print(end_of_page)
 
