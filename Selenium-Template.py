@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 import chromedriver_autoinstaller
 from pyvirtualdisplay import Display
+from selenium.webdriver.common.by import By
 display = Display(visible=0, size=(800, 800))  
 display.start()
 
@@ -49,7 +50,7 @@ with open('./GitHub_Action_Results.txt', 'w') as f:
     
     
     element = driver.find_element(
-    'xpath', "/html/body/app-root/div/main/div/app-floor-sheet/div/div[3]/div/div[3]/div/select")
+    'xpath', "/html/body/app-root/div/main/div/app-floor-sheet/div/div[3]/div/div[5]/div/select")
 driver.execute_script("arguments[0].click();", element)
 time.sleep(2)
 
